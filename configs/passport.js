@@ -13,7 +13,7 @@ passport.use(
         {
             clientID: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-            callbackURL: `${process.env.HOSTNAME_PUBLIC}/api/v1/auth/google/callback`,
+            callbackURL: `https://server-mern-hotel.vercel.app/api/v1/auth/google/callback`,
         },
         async function (accessToken, refreshToken, profile, cb) {
             try {
