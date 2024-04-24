@@ -148,7 +148,9 @@ const authGoogle = async (req, res, next) => {
     const token = await JWT.sign(payload, process.env.JWT_SECRET, {
         expiresIn: "7d",
     });
-    res.redirect(`${process.env.CLIENT_URL}/login/success?token=${token}`);
+    res.redirect(
+        `https://mern-hotel-client-five.vercel.app/login/success?token=${token}`
+    );
 };
 
 const authFacebook = async (req, res, next) => {
@@ -156,7 +158,9 @@ const authFacebook = async (req, res, next) => {
     const token = await JWT.sign(payload, process.env.JWT_SECRET, {
         expiresIn: "7d",
     });
-    res.redirect(`${process.env.CLIENT_URL}/login/success?token=${token}`);
+    res.redirect(
+        `https://mern-hotel-client-five.vercel.app/login/success?token=${token}`
+    );
 };
 
 const getUser = async (req, res) => {
